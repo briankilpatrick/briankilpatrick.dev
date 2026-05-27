@@ -4,7 +4,7 @@ export default function Blog() {
       padding: '80px 32px',
       borderBottom: '0.5px solid var(--border)',
     }}>
-      <div style={{ maxWidth: '800px' }}>
+      <div className="container">
         <p className="mono" style={{
           fontSize: '12px',
           color: 'var(--accent)',
