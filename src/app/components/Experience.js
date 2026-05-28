@@ -4,31 +4,36 @@ export default function Experience() {
       title: 'The Foundation',
       role: 'QA Engineer',
       period: '2013 - 2014',
-      description: "Where it started. I joined WANdisco as a junior QA engineer and quickly found myself taking on more than the job description suggested - including early responsibility managing a remote team in Chennai, India. It set the tone for everything that followed."
+      description: "Where it started. I joined WANdisco as a junior QA engineer and quickly found myself taking on more than the job description suggested - including early responsibility managing a remote team in Chennai, India. It set the tone for everything that followed.",
+      badges: ['QA', 'Testing', 'Automation', 'Git', 'SVN'],
     },
     {
       title: 'The Craft',
       role: 'Software Developer',
       period: '2014 - 2018',
-      description: "I moved into software development working on Java-based enterprise products, getting deep into build and release processes. I led a remote automation team across South America and later India. This is where I learned how software actually gets made - and how easily it can go wrong."
+      description: "I moved into software development working on Java-based enterprise products, getting deep into build and release processes. I led a remote automation team across South America and later India. This is where I learned how software actually gets made - and how easily it can go wrong.",
+      badges: ['Java', 'Linux', 'Bash', 'CI/CD', 'Build & Release'],
     },
     {
       title: 'The Pivot',
       role: 'Project Manager / Scrum Master',
       period: '2018 - 2022',
-      description: "The role that changed everything. I helped lead the transition from Waterfall to Agile across the organisation, introduced structured delivery practices, and helped shift release cadence from two delayed releases a year to four consistent quarterly deliveries. I found my thing - making teams work better."
+      description: "The role that changed everything. I helped lead the transition from Waterfall to Agile across the organisation, introduced structured delivery practices, and helped shift release cadence from two delayed releases a year to four consistent quarterly deliveries. I found my thing - making teams work better.",
+      badges: ['Agile', 'Scrum', 'SAFe', 'Value Delivery', 'Continuous Improvement'],
     },
     {
       title: 'The Leadership',
       role: 'Engineering Manager',
       period: '2022 - 2024',
-      description: "Building and growing people became the job. Recruitment, coaching, career development, performance - and working closely with Product and Testing to improve how we delivered together. This is where I understood what leadership actually means."
+      description: "Building and growing people became the job. Recruitment, coaching, career development, performance - and working closely with Product and Testing to improve how we delivered together. This is where I understood what leadership actually means.",
+      badges: ['Engineering Management', 'Coaching', 'Recruitment', 'People Leadership'],
     },
     {
       title: 'The Director',
       role: 'Director of Engineering',
       period: '2024 - 2025',
-      description: "Leading a global engineering organisation of thirty people across five direct reports and multiple product lines. Accountable for delivery, quality, and performance across distributed teams serving enterprise customers worldwide."
+      description: "Leading a global engineering organisation of thirty people across five direct reports and multiple product lines. Accountable for delivery, quality, and performance across distributed teams serving enterprise customers worldwide.",
+      badges: ['Engineering Leadership', 'Communication', 'Policy', 'Strategy', 'Delivery Governance'],
     },
   ]
 
@@ -128,6 +133,24 @@ export default function Experience() {
                 }}>
                   {chapter.description}
                 </p>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
+                  {chapter.badges.map((badge, badgeIndex) => {
+                    const colours = ['#378add', '#3fb950', '#d29922', '#bc8cff', '#f47067']
+                    const colour = colours[badgeIndex % colours.length]
+                    return (
+                      <span key={badge} className="mono" style={{
+                        fontSize: '10px',
+                        padding: '2px 8px',
+                        borderRadius: '4px',
+                        color: colour,
+                        border: '0.5px solid ' + colour + '40',
+                        background: colour + '10',
+                      }}>
+                        {badge}
+                      </span>
+                    )
+                  })}
+                </div>
               </div>
             </div>
           ))}
