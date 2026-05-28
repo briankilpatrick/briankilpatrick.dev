@@ -32,18 +32,20 @@ export default function Navbar() {
         justifyContent: 'space-between',
         padding: '16px 32px',
       }}>
-        <div className="mono" style={{ color: 'var(--accent)', fontSize: '13px', letterSpacing: '0.05em' }}>
-          bk@briankilpatrick.dev:~$
-          <span style={{
-            display: 'inline-block',
-            width: '8px',
-            height: '14px',
-            background: 'var(--accent)',
-            verticalAlign: 'middle',
-            marginLeft: '4px',
-            animation: 'blink 1.2s step-end infinite',
-          }} />
-        </div>
+        <a href="#" style={{ textDecoration: 'none' }}>
+          <div className="mono" style={{ color: 'var(--accent)', fontSize: '13px', letterSpacing: '0.05em' }}>
+            bk@briankilpatrick.dev:~$
+            <span style={{
+              display: 'inline-block',
+              width: '8px',
+              height: '14px',
+              background: 'var(--accent)',
+              verticalAlign: 'middle',
+              marginLeft: '4px',
+              animation: 'blink 1.2s step-end infinite',
+            }} />
+          </div>
+        </a>
 
         <div className="desktop-nav" style={{ display: 'flex', gap: '24px' }}>
           <a href="#about" className="mono" style={linkStyle}>./about</a>
