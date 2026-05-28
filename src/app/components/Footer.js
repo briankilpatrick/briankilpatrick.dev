@@ -23,7 +23,7 @@ export default function Footer() {
 
       <div style={{ display: 'flex', gap: '24px' }}>
         <a href="https://github.com/briankilpatrick" target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '11px', color: 'var(--text-secondary)', textDecoration: 'none' }}>github</a>
-        <a href="https://linkedin.com/in/briankilpatrick" target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '11px', color: 'var(--text-secondary)', textDecoration: 'none' }}>linkedin</a>
+        <a href="https://www.linkedin.com/in/brian-kilpatrick-05a0a587/" target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '11px', color: 'var(--text-secondary)', textDecoration: 'none' }}>linkedin</a>
         <a href="/cv.pdf" className="mono" style={{ fontSize: '11px', color: 'var(--text-secondary)', textDecoration: 'none' }}>./cv.pdf</a>
       </div>
     </footer>

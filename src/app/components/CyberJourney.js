@@ -4,22 +4,22 @@ export default function CyberJourney() {
       code: 'SEC0',
       label: 'Security Fundamentals',
       provider: 'TryHackMe',
-      status: 'active',
-      note: 'Almost complete',
+      status: 'complete',
+      note: 'complete',
     },
     {
       code: 'SEC1',
       label: 'Security Level 1',
       provider: 'TryHackMe',
-      status: 'upcoming',
-      note: 'Next',
+      status: 'active',
+      note: 'In progress',
     },
     {
       code: 'SAL1',
       label: 'Security Analyst Level 1',
       provider: 'TryHackMe',
-      status: 'locked',
-      note: null,
+      status: 'up next',
+      note: 'next',
     },
     {
       code: 'SAL2',
@@ -45,15 +45,17 @@ export default function CyberJourney() {
   ]
 
   const getStatusColor = (status) => {
+    if (status === 'complete') return 'var(--green)'
     if (status === 'active') return 'var(--accent)'
     if (status === 'upcoming') return '#d29922'
     return 'var(--border)'
   }
 
   const getStatusLabel = (status) => {
-    if (status === 'active') return 'in progress'
-    if (status === 'upcoming') return 'next'
-    return 'locked'
+      if (status === 'complete') return 'complete'
+      if (status === 'active') return 'in progress'
+      if (status === 'upcoming') return 'next'
+      return 'locked'
   }
 
   return (
@@ -108,12 +110,13 @@ export default function CyberJourney() {
                   width: '12px',
                   height: '12px',
                   borderRadius: '50%',
-                  background: milestone.status === 'active' ? 'var(--accent)' : 'transparent',
+                  background: milestone.status === 'active' ? 'var(--accent)' :
+                              milestone.status === 'complete' ? 'var(--green)' : 'transparent',
                   border: '2px solid',
                   borderColor: getStatusColor(milestone.status),
                   flexShrink: 0,
                   marginTop: '4px',
-                  animation: milestone.status === 'active' ? 'pulse 2s ease-in-out infinite' : 'none',
+                  animation: milestone.status === 'active' ? 'pulse 1.5s ease-in-out infinite' : 'none',
                 }} />
                 {index < milestones.length - 1 && (
                   <div style={{

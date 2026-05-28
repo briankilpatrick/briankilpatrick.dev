@@ -52,7 +52,7 @@ export default function Contact() {
             hello@briankilpatrick.dev
           </a>
 
-          <a href="https://linkedin.com/in/briankilpatrick" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://www.linkedin.com/in/brian-kilpatrick-05a0a587/" target="_blank" rel="noopener noreferrer" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '12px',
